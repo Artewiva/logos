@@ -1,0 +1,1475 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Programma Logos 2026 – Parole dal Mediterraneo</title>
+
+  <meta
+    name="description"
+    content="Programma completo di Logos – Parole dal Mediterraneo 2026, dal 24 al 27 settembre a Villa Filippina, Palermo."
+  >
+
+  <style>
+    :root {
+      --navy: #26385f;
+      --navy-dark: #17233f;
+      --pink: #ce5593;
+      --cream: #f6f0e5;
+      --orange: #f0ad4e;
+      --sea: #148da0;
+      --green: #347d68;
+      --white: #fff;
+      --text: #22252c;
+      --muted: #696e79;
+      --border: #ddd8ce;
+      --shadow: 0 16px 42px rgba(23, 35, 63, .12);
+      --radius: 22px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background: #faf8f3;
+      font-family:
+        Arial, Helvetica, system-ui, -apple-system, sans-serif;
+    }
+
+    button,
+    input,
+    select {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: -100px;
+      left: 15px;
+      z-index: 999;
+      padding: 12px 17px;
+      color: white;
+      background: var(--pink);
+      border-radius: 10px;
+    }
+
+    .skip-link:focus {
+      top: 15px;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      color: white;
+      background: rgba(23, 35, 63, .96);
+      border-bottom: 1px solid rgba(255, 255, 255, .13);
+      backdrop-filter: blur(13px);
+    }
+
+    .header-inner {
+      width: min(1240px, calc(100% - 32px));
+      min-height: 74px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      width: 45px;
+      height: 45px;
+      display: grid;
+      place-items: center;
+      border: 2px solid white;
+      border-radius: 50%;
+      font-size: 23px;
+    }
+
+    .brand-name {
+      display: block;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 30px;
+      line-height: .9;
+    }
+
+    .brand-subtitle {
+      display: block;
+      margin-top: 6px;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    .main-nav {
+      display: flex;
+      gap: 24px;
+    }
+
+    .main-nav a {
+      color: white;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .main-nav a:hover,
+    .main-nav a:focus {
+      color: #ffb8db;
+    }
+
+    .hero {
+      min-height: 545px;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      color: white;
+      background:
+        linear-gradient(90deg, rgba(23,35,63,.97), rgba(23,35,63,.62)),
+        linear-gradient(
+          160deg,
+          #e9dfca 0 53%,
+          #148da0 53% 72%,
+          #26385f 72%
+        );
+    }
+
+    .hero::before {
+      content: "";
+      width: 315px;
+      height: 315px;
+      position: absolute;
+      top: 62px;
+      right: 8%;
+      background: var(--orange);
+      border-radius: 50%;
+      opacity: .88;
+    }
+
+    .hero::after {
+      content: "⛵";
+      position: absolute;
+      right: 16%;
+      bottom: 75px;
+      font-size: clamp(90px, 15vw, 190px);
+      filter: drop-shadow(0 15px 15px rgba(0,0,0,.16));
+    }
+
+    .hero-inner {
+      width: min(1240px, calc(100% - 32px));
+      margin: auto;
+      padding: 110px 0 85px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      margin: 0 0 14px;
+      color: #ffb8db;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      max-width: 850px;
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(62px, 10vw, 116px);
+      font-weight: 400;
+      line-height: .82;
+    }
+
+    .hero h1 span {
+      max-width: 570px;
+      margin-top: 23px;
+      display: block;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: clamp(25px, 4vw, 45px);
+      font-weight: 900;
+      line-height: .97;
+      text-transform: uppercase;
+    }
+
+    .hero-meta {
+      margin-top: 34px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 11px;
+    }
+
+    .hero-badge {
+      padding: 12px 17px;
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.45);
+      border-radius: 999px;
+      font-weight: 750;
+      backdrop-filter: blur(7px);
+    }
+
+    .main-container {
+      width: min(1240px, calc(100% - 32px));
+      margin: auto;
+    }
+
+    .filters {
+      margin-top: -41px;
+      padding: 23px;
+      position: relative;
+      z-index: 10;
+      display: grid;
+      grid-template-columns: 2fr repeat(4, minmax(135px, 1fr)) auto;
+      gap: 13px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .field {
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .field label {
+      color: var(--navy);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .field input,
+    .field select {
+      width: 100%;
+      min-height: 48px;
+      padding: 0 12px;
+      color: var(--text);
+      background: #faf9f6;
+      border: 1px solid var(--border);
+      border-radius: 11px;
+      outline: none;
+    }
+
+    .field input:focus,
+    .field select:focus {
+      border-color: var(--pink);
+      box-shadow: 0 0 0 4px rgba(206, 85, 147, .13);
+    }
+
+    .reset-button {
+      min-height: 48px;
+      align-self: end;
+      padding: 0 18px;
+      color: white;
+      background: var(--navy);
+      border: 0;
+      border-radius: 11px;
+      font-weight: 800;
+    }
+
+    .reset-button:hover {
+      background: var(--pink);
+    }
+
+    .program-section {
+      padding: 78px 0 90px;
+    }
+
+    .section-heading {
+      margin-bottom: 28px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 35px;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(43px, 6vw, 72px);
+      font-weight: 400;
+      line-height: .95;
+    }
+
+    .section-heading > p {
+      max-width: 560px;
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .day-buttons,
+    .space-buttons {
+      display: flex;
+      gap: 9px;
+      overflow-x: auto;
+      scrollbar-width: thin;
+    }
+
+    .day-buttons {
+      margin: 31px 0 18px;
+    }
+
+    .space-buttons {
+      margin: 0 0 25px;
+      padding-bottom: 10px;
+    }
+
+    .filter-chip {
+      flex: 0 0 auto;
+      padding: 10px 15px;
+      color: var(--navy);
+      background: transparent;
+      border: 1px solid var(--navy);
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .filter-chip:hover,
+    .filter-chip.active {
+      color: white;
+      background: var(--navy);
+    }
+
+    .filter-chip .chip-count {
+      margin-left: 5px;
+      opacity: .7;
+    }
+
+    .result-summary {
+      margin: 24px 0 38px;
+      padding: 17px 19px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      color: var(--muted);
+      background: var(--cream);
+      border-radius: 13px;
+    }
+
+    .result-summary strong {
+      color: var(--navy);
+    }
+
+    .space-section {
+      margin-bottom: 62px;
+      scroll-margin-top: 95px;
+    }
+
+    .space-heading {
+      margin-bottom: 19px;
+      padding-bottom: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      color: var(--navy);
+      border-bottom: 2px solid var(--navy);
+    }
+
+    .space-heading h3 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(29px, 4vw, 46px);
+      font-weight: 400;
+    }
+
+    .space-count {
+      flex: 0 0 auto;
+      padding: 7px 11px;
+      color: white;
+      background: var(--pink);
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 17px;
+    }
+
+    .event-card {
+      min-height: 230px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 17px;
+      box-shadow: 0 8px 24px rgba(23,35,63,.06);
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .event-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 31px rgba(23,35,63,.12);
+    }
+
+    .event-card::before {
+      content: "";
+      height: 7px;
+      background: var(--pink);
+    }
+
+    .event-card:nth-child(4n+2)::before {
+      background: var(--sea);
+    }
+
+    .event-card:nth-child(4n+3)::before {
+      background: var(--orange);
+    }
+
+    .event-card:nth-child(4n+4)::before {
+      background: var(--green);
+    }
+
+    .event-content {
+      padding: 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .event-meta {
+      margin-bottom: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .meta-pill {
+      padding: 6px 9px;
+      color: var(--navy);
+      background: var(--cream);
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .event-card h4 {
+      margin: 0 0 14px;
+      color: var(--navy);
+      font-size: 19px;
+      line-height: 1.17;
+      text-transform: uppercase;
+    }
+
+    .event-category {
+      margin-top: auto;
+      color: var(--pink);
+      font-size: 11px;
+      font-weight: 900;
+      line-height: 1.5;
+      text-transform: uppercase;
+    }
+
+    .empty-state {
+      padding: 63px 24px;
+      text-align: center;
+      background: white;
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+    }
+
+    .empty-state h3 {
+      margin: 0 0 12px;
+      color: var(--navy);
+      font-family: Georgia, serif;
+      font-size: 35px;
+      font-weight: 400;
+    }
+
+    .info-section {
+      padding: 75px 0;
+      color: white;
+      background: var(--navy-dark);
+    }
+
+    .info-inner {
+      width: min(1240px, calc(100% - 32px));
+      margin: auto;
+    }
+
+    .info-section h2 {
+      margin: 0 0 30px;
+      font-family: Georgia, serif;
+      font-size: clamp(39px, 6vw, 66px);
+      font-weight: 400;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .info-card {
+      padding: 25px;
+      color: var(--text);
+      background: white;
+      border-radius: 17px;
+    }
+
+    .info-card h3 {
+      margin-top: 0;
+      color: var(--navy);
+    }
+
+    .info-card p {
+      margin-bottom: 0;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .footer {
+      padding: 37px 0;
+      color: white;
+      background: #0d162c;
+    }
+
+    .footer-inner {
+      width: min(1240px, calc(100% - 32px));
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .footer p {
+      margin: 5px 0;
+      color: rgba(255,255,255,.7);
+    }
+
+    @media (max-width: 1050px) {
+      .filters {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .search-field {
+        grid-column: span 2;
+      }
+
+      .events-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 750px) {
+      .main-nav {
+        display: none;
+      }
+
+      .hero {
+        min-height: 500px;
+      }
+
+      .hero::after {
+        opacity: .3;
+      }
+
+      .filters {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .search-field,
+      .space-field {
+        grid-column: 1 / -1;
+      }
+
+      .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .events-grid,
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .result-summary,
+      .footer-inner {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .filters {
+        grid-template-columns: 1fr;
+      }
+
+      .search-field,
+      .space-field {
+        grid-column: auto;
+      }
+
+      .hero-inner {
+        padding-bottom: 65px;
+      }
+
+      .event-card {
+        min-height: 200px;
+      }
+    }
+
+    @media print {
+      .site-header,
+      .hero,
+      .filters,
+      .day-buttons,
+      .space-buttons,
+      .info-section,
+      .footer {
+        display: none !important;
+      }
+
+      .program-section {
+        padding: 20px 0;
+      }
+
+      .events-grid {
+        display: block;
+      }
+
+      .event-card {
+        min-height: auto;
+        margin-bottom: 10px;
+        break-inside: avoid;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#programma">
+    Vai al programma
+  </a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#">
+        <span class="brand-mark" aria-hidden="true">✺</span>
+
+        <span>
+          <span class="brand-name">logos</span>
+          <span class="brand-subtitle">Parole dal Mediterraneo</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navigazione principale">
+        <a href="#programma">Programma</a>
+        <a href="#informazioni">Informazioni</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Prima edizione · Palermo</p>
+
+      <h1>
+        logos
+        <span>Parole dal Mediterraneo</span>
+      </h1>
+
+      <div class="hero-meta">
+        <span class="hero-badge">24–27 settembre 2026</span>
+        <span class="hero-badge">Villa Filippina, Palermo</span>
+        <span class="hero-badge">209 appuntamenti</span>
+      </div>
+    </div>
+  </section>
+
+  <main class="main-container">
+    <form id="filters" class="filters" autocomplete="off">
+      <div class="field search-field">
+        <label for="search">Cerca nel programma</label>
+        <input
+          id="search"
+          type="search"
+          placeholder="Titolo, autore, tema…"
+        >
+      </div>
+
+      <div class="field">
+        <label for="date">Giorno</label>
+        <select id="date">
+          <option value="">Tutti i giorni</option>
+          <option value="24">Giovedì 24 settembre</option>
+          <option value="25">Venerdì 25 settembre</option>
+          <option value="26">Sabato 26 settembre</option>
+          <option value="27">Domenica 27 settembre</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="time-from">Dalle ore</label>
+        <input id="time-from" type="time">
+      </div>
+
+      <div class="field">
+        <label for="time-to">Alle ore</label>
+        <input id="time-to" type="time">
+      </div>
+
+      <div class="field space-field">
+        <label for="space">Spazio</label>
+        <select id="space">
+          <option value="">Tutti gli spazi</option>
+        </select>
+      </div>
+
+      <button class="reset-button" type="reset">
+        Azzera
+      </button>
+    </form>
+
+    <section id="programma" class="program-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Tutti gli appuntamenti</p>
+          <h2>Programma</h2>
+        </div>
+
+        <p>
+          Seleziona una data, una fascia oraria o uno spazio.
+          Puoi anche cercare un titolo, un autore, un argomento
+          o una categoria.
+        </p>
+      </div>
+
+      <nav
+        id="day-buttons"
+        class="day-buttons"
+        aria-label="Filtra il programma per giorno"
+      ></nav>
+
+      <nav
+        id="space-buttons"
+        class="space-buttons"
+        aria-label="Filtra il programma per spazio"
+      ></nav>
+
+      <div class="result-summary" aria-live="polite">
+        <span id="result-count"></span>
+        <span id="active-filters"></span>
+      </div>
+
+      <div id="results"></div>
+    </section>
+  </main>
+
+  <section id="informazioni" class="info-section">
+    <div class="info-inner">
+      <h2>Informazioni</h2>
+
+      <div class="info-grid">
+        <article class="info-card">
+          <h3>Quando</h3>
+          <p>
+            Dal 24 al 27 settembre 2026, con appuntamenti
+            dalla mattina fino alla sera.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Dove</h3>
+          <p>
+            Parco Villa Filippina, Palermo. Gli eventi si svolgono
+            tra palchi, terrazze, aree culturali, cinema, teatro e
+            spazi dedicati ai bambini.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Contatti</h3>
+          <p>
+            <a href="mailto:info@logosfestival.it">
+              info@logosfestival.it
+            </a><br>
+            <a href="https://www.logosfestival.it">
+              www.logosfestival.it
+            </a>
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <strong>Logos – Parole dal Mediterraneo 2026</strong>
+        <p>Villa Filippina, Palermo</p>
+      </div>
+
+      <div>
+        <p>24–27 settembre 2026</p>
+        <p>Programma completo: 209 appuntamenti</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /*
+      LEGENDA DEGLI SPAZI
+
+      VD = Spazio Vito D’Anna
+      K  = Area Kids
+      SK = Area Skoda / Auto System
+      C  = Palco Confcommercio / ALI Palermo
+      T  = Terrazza Logos
+      CU = Cucine del Mediterraneo
+      LU = Area Lumsa
+      M  = Palco Regione Siciliana – Main Stage
+      CT = Cine-Teatro Tenute Orestiadi
+      RX = Area relax Piumini Danesi
+      BP = Bar Parentesi Letteraria
+      CH = Chirologa Angie Soleluna
+      IT = Percorsi e appuntamenti itineranti
+    */
+
+    const spaces = {
+      VD: "Spazio Vito D’Anna",
+      K: "Area Kids",
+      SK: "Area Skoda / Auto System",
+      C: "Palco Confcommercio / ALI Palermo",
+      T: "Terrazza Logos",
+      CU: "Cucine del Mediterraneo",
+      LU: "Area Lumsa",
+      M: "Palco Regione Siciliana – Main Stage",
+      CT: "Cine-Teatro Tenute Orestiadi",
+      RX: "Area relax Piumini Danesi",
+      BP: "Bar Parentesi Letteraria",
+      CH: "Chirologa Angie Soleluna",
+      IT: "Percorsi e appuntamenti itineranti",
+      E34: "Stand E34 – Adelphi",
+      E1: "Stand E1 – Di Girolamo Editore"
+    };
+
+    const dateLabels = {
+      24: "Giovedì 24 settembre",
+      25: "Venerdì 25 settembre",
+      26: "Sabato 26 settembre",
+      27: "Domenica 27 settembre"
+    };
+
+    /*
+      Formato di ogni riga:
+      giorno | orario | codice spazio | titolo | categoria
+
+      GG indica "Tutto il giorno".
+    */
+
+    const rawEvents = `
+24|GG|VD|Mostra “Sicilia, collage letterario dell’isola” di Francesca Sacco|Mostra
+24|17:00|K|Come ho salvato la vita a Einstein|#KIDS
+24|17:00|SK|La vita giovane|#LETTERATURACONTEMPORANEA
+24|17:00|C|Diario dallo Stretto|#PELAGOS
+24|17:00|T|La Palermo di Pirandello|#PELAGOS
+24|17:00|CU|Dalle parole alle stelle. Il progetto “Seconda stella a destra”|#LOGOSSCIENZA
+24|17:00|LU|Essere naufraghi nella Grecia antica|#PELAGOS
+24|17:45|M|Cerimonia di apertura|Festival
+24|18:00|M|La Sicilia e il Mare Nostrum come ponte tra tre continenti|#PELAGOS
+24|18:00|K|Come nasce una rivista|#KIDS
+24|18:00|SK|Perché il canone ignora le scrittrici?|#SGUARDISULMONDO
+24|18:00|LU|Distanza di sicurezza|#LETTERATURACONTEMPORANEA
+24|18:00|C|Appunti di resistenza civile|#SGUARDISULMONDO
+24|18:00|T|Storie da Gaza|#SGUARDISULMONDO
+24|18:00|CT|Storia della Targa Florio|#PELAGOS
+24|18:00|VD|La cultura disarma la mafia|#SGUARDISULMONDO
+24|18:00|CU|Come ti cunzo l’olio|#CUCINEDALMEDITERRANEO
+24|18:30|RX|Stop scroll. Come sopravvivere a social, IA e fake news|Incontro
+24|19:00|CT|Cùntami|#PELAGOS
+24|19:00|T|Il doppio e l’eterno|#SGUARDISULMONDO
+24|19:00|BP|Reading party e speed date letterario|#LETTERATURACONTEMPORANEA
+24|19:00|M|Leggendo Epruno – Storie da un Mare Nostrum|#PELAGOS
+24|19:00|VD|Talenti femminili in scena|#LESCRITTRICIELASTORIA
+24|19:00|CU|Etna da bere, otto vini imperdibili|#CUCINEDALMEDITERRANEO
+24|19:00|SK|La memoria del vento|#PELAGOS
+24|20:00|M|La mezza|#LETTERATURACONTEMPORANEA
+24|20:00|T|Le forme|#LETTERATURACONTEMPORANEA
+24|20:00|LU|Palermo, architettura della città|#PELAGOS
+24|21:00|CT|Trois Ruptures|#LOGOSTEATRO
+24|21:00|T|Osservazioni astronomiche guidate|#LOGOSSCIENZA
+24|21:30|C|Festa d’apertura Logos: Donne’n’Bass in concerto e DJ set di Antony Brewerton|#LOGOSMUSICA
+25|GG|VD|Mostra “Sicilia, collage letterario dell’isola” di Francesca Sacco|Mostra
+25|GG|CH|Le mani di chi scrive|Progetto speciale
+25|10:00|C|E la storia continua…|#KIDS
+25|10:00|SK|Connessioni consapevoli – Abbecedario per scuole primarie e secondarie di primo grado|Educazione digitale
+25|10:00|VD|Libri e maestre a Scienze delle Merendine|Letteratura per l’infanzia
+25|10:00|K|Come ho salvato la vita a Einstein|#KIDS
+25|10:00|IT|Passeggiata tra gli editori|#KIDS
+25|11:00|CT|Andrea Camilleri|#GLIANTENATIDELFUTURO
+25|11:30|SK|Connessioni consapevoli – Patentino digitale|Educazione digitale
+25|12:00|LU|Archeologia a Donnafugata|#PELAGOS
+25|12:00|C|Rassegna stampa di «la Repubblica – Palermo» con Stefania Auci|#LAREPUBBLICA
+25|13:00|CU|Qui si fa da mangiare. La cucina delle taverne|#CUCINEDALMEDITERRANEO
+25|15:00|LU|Il Gattopardo e l’astronomia|#LOGOSSCIENZA
+25|16:00|C|Dalle profondità del Mediterraneo ai confini dell’Universo|#LOGOSSCIENZA
+25|16:00|LU|Gabinetto Vieusseux|#LETTERATURACONTEMPORANEA
+25|16:00|T|Donne per la pace|#SGUARDISULMONDO
+25|16:00|VD|Criptidi|#LETTERATURACONTEMPORANEA
+25|16:00|SK|Un’educazione siciliana|#LETTERATURACONTEMPORANEA
+25|16:00|CT|Alfabeto di cenere. Un dizionario per Gesualdo Bufalino|#GLIANTENATIDELFUTURO
+25|16:00|M|I cunti di Stefania Auci|#LETTERATURACONTEMPORANEA
+25|17:00|RX|New Book Club|#SGUARDISULMONDO
+25|17:00|K|Moon Kids|#KIDS
+25|17:00|T|Fare cultura sull’isola|#PELAGOS
+25|17:00|LU|Il Mediterraneo tra logos ed ethos|#PELAGOS
+25|17:00|C|La pubblica (d)istruzione|#SGUARDISULMONDO
+25|17:00|M|Raccontare la guerra|#SGUARDISULMONDO
+25|17:00|CT|Palermo città invisibile: il Centro Sperimentale di Cinematografia si racconta|#PELAGOS
+25|17:00|SK|Storie mediterranee tra Italia e Africa|#SGUARDISULMONDO
+25|17:30|VD|Corpi contemporanei|#LETTERATURACONTEMPORANEA
+25|18:00|T|Farmaco e veleno: l’intelligenza artificiale nelle PMI del territorio|Intelligenza artificiale
+25|18:00|E34|#IlMioAdelphi|#LETTERATURACONTEMPORANEA
+25|18:00|CU|Il senso profondo dell’alimentazione|#CUCINEDALMEDITERRANEO
+25|18:00|M|Elsa Morante|#GLIANTENATIDELFUTURO
+25|18:00|LU|Franco Scaldati|#SGUARDISULMONDO
+25|18:00|K|Il linguaggio segreto delle cose|#KIDS
+25|18:00|SK|Un romanzo sul caldo estremo|#LETTERATURACONTEMPORANEA
+25|18:15|BP|Come funziono? Il processo creativo spiegato da un creativo – Costanza Quatriglio|Creatività
+25|18:30|IT|Passeggiata letteraria nei luoghi del Quadrato Magico|#PELAGOS
+25|18:30|VD|Il Leggendario|#KIDS
+25|19:00|CU|Radici: il racconto di un territorio attraverso il vino|#CUCINEDALMEDITERRANEO
+25|19:00|LU|Lo stregone|#LETTERATURACONTEMPORANEA
+25|19:00|SK|Le avvelenatrici|#LESCRITTRICIELASTORIA
+25|19:00|T|Tre insonni|#LETTERATURACONTEMPORANEA
+25|19:00|CT|Eredità sottratta|#LETTERATURACONTEMPORANEA
+25|19:00|C|Persone e paesaggi|#LETTERATURACONTEMPORANEA
+25|19:00|M|Come sono diventato scrittore – Jonathan Coe|#LETTERATURACONTEMPORANEA
+25|19:30|VD|I tarocchi siciliani|#PELAGOS
+25|19:45|K|Reparto 25. La veglia della follia|#LOGOSTEATRO
+25|21:00|CT|Lievete da Annanze ’O Sole|#LOGOSCINEMA
+25|21:00|C|La malinconia del tartufo|#BLACKHOUR
+25|22:00|M|Lero Lero in concerto|#LOGOSMUSICA
+26|GG|VD|Mostra “Sicilia, collage letterario dell’isola” di Francesca Sacco|Mostra
+26|GG|CH|Le mani di chi scrive|Progetto speciale
+26|10:00|C|La seminatrice di coraggio|#LETTERATURACONTEMPORANEA
+26|10:00|SK|Workshop con tecnologie AR: viaggio tra le stelle in 3D|#LOGOSSCIENZA
+26|10:00|LU|Piazzetta Bagnasco|#PELAGOS
+26|10:30|K|Quando leggere non è mai abbastanza|#KIDS
+26|11:00|T|Paolo Giaccone|#PELAGOS
+26|11:00|LU|Amori e dolori|#SGUARDISULMONDO
+26|11:00|SK|Censura e letteratura|#LETTERATURACONTEMPORANEA
+26|11:00|M|La poesia di Egle Palazzolo|#LETTERATURACONTEMPORANEA
+26|11:00|C|Rassegna stampa di «la Repubblica – Palermo» con Gian Mauro Costa|#LAREPUBBLICA
+26|11:30|K|Operazione sorriso|#KIDS
+26|12:00|LU|Messina è una vertigine|#SGUARDISULMONDO
+26|12:00|VD|La non-scuola|#SGUARDISULMONDO
+26|12:00|SK|La vacanza degli intellettuali|#LETTERATURACONTEMPORANEA
+26|12:00|M|Totò Schillaci|#SGUARDISULMONDO
+26|12:00|C|Natalia Ginzburg|#GLIANTENATIDELFUTURO
+26|13:00|CU|Arancina di ieri e di oggi|#CUCINEDALMEDITERRANEO
+26|14:00|CT|Gotico siciliano|#LETTERATURACONTEMPORANEA
+26|15:00|CT|Falsi amici|#SGUARDISULMONDO
+26|15:00|LU|Il mondo senza inverno|#LETTERATURACONTEMPORANEA
+26|15:00|SK|Sicilia terra di dolore|#PELAGOS
+26|15:00|C|Il lungo viaggio dei fotoni gamma|#LOGOSSCIENZA
+26|15:30|CU|Il gusto di raccontarsi|#CUCINEDALMEDITERRANEO
+26|16:00|T|Dalle stelle osservate alle tecnologie del futuro|#LOGOSSCIENZA
+26|16:00|LU|Pupi di zucchero|#PELAGOS
+26|16:00|SK|L’influsso dei fagiani|#LETTERATURACONTEMPORANEA
+26|16:00|VD|Tomasi di Lampedusa|#GLIANTENATIDELFUTURO
+26|16:00|CT|Amori e limiti|#LETTERATURACONTEMPORANEA
+26|16:00|M|L’isola dei tesori|#PELAGOS
+26|16:30|K|Ramos Day|#KIDS
+26|16:30|CU|Fregola, anima mediterranea|#CUCINEDALMEDITERRANEO
+26|17:00|RX|L’angolo delle parole con Antonella Chinnici e Francesco Lepore|Incontro
+26|17:00|M|La psicologia per la scuola dell’inclusione|#SGUARDISULMONDO
+26|17:00|C|Controtempo|#LETTERATURACONTEMPORANEA
+26|17:00|SK|Il Mediterraneo che guarda lo spazio|#LOGOSSCIENZA
+26|17:00|LU|Radici e memoria|#LESCRITTRICIELASTORIA
+26|17:00|CT|Il Premio The Bridge|#SGUARDISULMONDO
+26|17:00|VD|Femministe musulmane|#SGUARDISULMONDO
+26|17:30|K|Andavano sempre là|#KIDS
+26|18:00|M|Il rogo dell’angelo|#BLACKHOUR
+26|18:00|CU|Alla scoperta del quinto quarto|#CUCINEDALMEDITERRANEO
+26|18:00|LU|L’eremo dei folli|#LETTERATURACONTEMPORANEA
+26|18:00|RX|Intervista dietro le quinte con Mario Azzolini|Incontro
+26|18:00|C|Giornata europea delle lingue|#SGUARDISULMONDO
+26|18:00|VD|Non c’è due senza quattro. Bud Spencer, Terence Hill e gli altri|#LETTERATURACONTEMPORANEA
+26|18:00|E1|Tra le righe del silenzio. Giuseppina Patti, storia di una scrittrice siciliana dimenticata|#GLIANTENATIDELFUTURO
+26|18:00|T|Tutti i nostri segreti|#LETTERATURACONTEMPORANEA
+26|18:00|CT|Siciliani che scrivono di Sicilia|#PELAGOS
+26|18:00|SK|Il partito disarmato|#LETTERATURACONTEMPORANEA
+26|18:30|K|Viaggi tra le storie|#KIDS
+26|19:00|CT|Interno familiare: un monologo di Iaia Forte|#GLIANTENATIDELFUTURO
+26|19:00|VD|Jazz Club|#LETTERATURACONTEMPORANEA
+26|19:00|LU|Lunario dei giorni insonni|#LETTERATURACONTEMPORANEA
+26|19:00|SK|Giùnapoli|#LETTERATURACONTEMPORANEA
+26|19:00|T|Jane Austen|#GLIANTENATIDELFUTURO
+26|20:00|SK|L’ultimo ricordo|#LETTERATURACONTEMPORANEA
+26|20:00|C|Maria Bellonci|#GLIANTENATIDELFUTURO
+26|20:00|CT|Il mondo di Costanza Quatriglio|#SGUARDISULMONDO
+26|20:00|T|La festa del mio temporale|#LETTERATURACONTEMPORANEA
+26|20:00|LU|Immortali|#LETTERATURACONTEMPORANEA
+26|20:00|VD|In calesse con Pitrè|#PELAGOS
+26|20:30|M|Partitura Medea|#LOGOSTEATRO
+26|21:00|C|Medinova e la sua storia|#LETTERATURACONTEMPORANEA
+26|21:30|CT|Best of Animaphix|#LOGOSCINEMA
+26|22:30|M|DJ set a cura di Bengover Crew|#LOGOSMUSICA
+27|GG|VD|Mostra “Sicilia, collage letterario dell’isola” di Francesca Sacco|Mostra
+27|GG|CH|Le mani di chi scrive|Progetto speciale
+27|10:00|LU|(In)Controfestival|#PELAGOS
+27|10:00|M|Il rispetto violato. Docenti maltrattati, studenti maltrattanti|#SGUARDISULMONDO
+27|10:30|CU|Moak Coffee Experience|#CUCINEDALMEDITERRANEO
+27|10:30|BP|Come funziono? Il processo creativo spiegato da un creativo – Stefania Auci|Creatività
+27|10:30|K|Yoga mamme e bimbə|#KIDS
+27|11:00|IT|Perdersi a Palermo: tra Villa Filippina e piazza Olivella|#LETTERATURACONTEMPORANEA
+27|11:00|C|Gli Olmi: un movimento di resistenza culturale|#PELAGOS
+27|11:00|VD|Il lavoro senza di noi|#SGUARDISULMONDO
+27|11:00|LU|AI ed educazione digitale. Capire il mondo ai tempi dell’AI|Intelligenza artificiale
+27|11:00|CT|Proust: terapia di gruppo|#SGUARDISULMONDO
+27|11:30|RX|L’angolo delle parole con Antonella Chinnici e Gabriele Giuffrè|Incontro
+27|11:30|K|Cartolina immaginaria|#KIDS
+27|12:00|C|Rassegna stampa di «la Repubblica – Palermo» con Gaetano Savatteri e Rosita Manuguerra|#LAREPUBBLICA
+27|12:00|VD|Fabrizio Miccoli|#SGUARDISULMONDO
+27|12:00|SK|La dolce e grata amicizia|#LETTERATURACONTEMPORANEA
+27|12:00|LU|Panegirico per lo Stretto|#SGUARDISULMONDO
+27|12:00|T|Il viaggiatore breve|#LETTERATURACONTEMPORANEA
+27|14:00|LU|La mala notte|#LETTERATURACONTEMPORANEA
+27|14:00|VD|Spegni tutto|#SGUARDISULMONDO
+27|15:00|LU|Lapilli: una nuova collana di narrativa|#LETTERATURACONTEMPORANEA
+27|15:00|SK|Il posto che chiamiamo casa|#LETTERATURACONTEMPORANEA
+27|15:00|CT|Il giardino dei fiori infelici|#LETTERATURACONTEMPORANEA
+27|15:00|T|Quel che facciamo dell’amore|#LETTERATURACONTEMPORANEA
+27|15:30|K|Uno sguardo su altri mondi. La ricerca esoplanetaria a Palermo|#LOGOSSCIENZA
+27|16:00|M|Felicità|#SGUARDISULMONDO
+27|16:00|SK|L’ultima estate di un uomo per bene|#LETTERATURACONTEMPORANEA
+27|16:00|T|Prendersi cura di un mondo in fiamme|#SGUARDISULMONDO
+27|16:00|C|Ritrovarsi|#LESCRITTRICIELASTORIA
+27|16:00|VD|L’Arena ri Spagnola|#LETTERATURACONTEMPORANEA
+27|16:00|LU|La lunga estate dei gelsomini|#LESCRITTRICIELASTORIA
+27|16:30|CT|Arte per cambiare il mondo|#SGUARDISULMONDO
+27|16:30|K|Nonna Gruffalò|#KIDS
+27|17:00|VD|Dammi per sempre giugno|#LETTERATURACONTEMPORANEA
+27|17:00|SK|Quanto splende questo nero|#LETTERATURACONTEMPORANEA
+27|17:00|LU|Prickly Flower|#LETTERATURACONTEMPORANEA
+27|17:00|M|Gli anni in bianco e in nero|#LESCRITTRICIELASTORIA
+27|17:00|CU|Pane, una storia mediterranea|#CUCINEDALMEDITERRANEO
+27|17:00|C|La letteratura e la Storia|#LESCRITTRICIELASTORIA
+27|17:00|T|I disconnessi|#LETTERATURACONTEMPORANEA
+27|17:30|K|La mano pelosa|#KIDS
+27|18:00|RX|Reading poetico|Poesia
+27|18:00|LU|Il rivoluzionario e la maestra|#LESCRITTRICIELASTORIA
+27|18:00|C|Italo Calvino|#GLIANTENATIDELFUTURO
+27|18:00|SK|Rosso Panarea|#BLACKHOUR
+27|18:00|CU|L’argento del Mediterraneo. Il pesce azzurro, tesoro dei nostri mari|#CUCINEDALMEDITERRANEO
+27|18:30|K|Senza frontiere|#KIDS
+27|18:30|CT|Post Mortem|#LOGOSTEATRO
+27|19:00|VD|La ceramica delle Madonie|#PELAGOS
+27|19:00|T|Sicilia. Collage letterario dell’isola|#PELAGOS
+27|19:00|LU|Anna Banti|#GLIANTENATIDELFUTURO
+27|19:00|C|Cagliostro e le sue storie|#LESCRITTRICIELASTORIA
+27|19:00|SK|Le streghe ribelli|#LESCRITTRICIELASTORIA
+27|19:30|CT|San Francesco e il canto della terra|#SGUARDISULMONDO
+27|19:30|M|I convitati di pietra, Premio Strega 2026|#LETTERATURACONTEMPORANEA
+27|19:30|K|Dagli USA al Mediterraneo: quando i raggi X svelano le stelle giovani|#LOGOSSCIENZA
+27|20:30|M|Maylis de Kerangal: una voce mediterranea|#PELAGOS
+27|21:30|M|Premio Bravo|#PELAGOS
+27|22:00|M|Cerimonia di chiusura del festival|Festival
+27|22:15|M|Giulia Mei in concerto|#LOGOSMUSICA
+    `.trim();
+
+    const events = rawEvents
+      .split("\n")
+      .map((row, index) => {
+        const [day, time, spaceCode, title, category] =
+          row.split("|").map(value => value.trim());
+
+        return {
+          id: index + 1,
+          day,
+          time,
+          spaceCode,
+          space: spaces[spaceCode] || spaceCode,
+          title,
+          category
+        };
+      });
+
+    const elements = {
+      form: document.querySelector("#filters"),
+      search: document.querySelector("#search"),
+      date: document.querySelector("#date"),
+      from: document.querySelector("#time-from"),
+      to: document.querySelector("#time-to"),
+      space: document.querySelector("#space"),
+      dayButtons: document.querySelector("#day-buttons"),
+      spaceButtons: document.querySelector("#space-buttons"),
+      count: document.querySelector("#result-count"),
+      activeFilters: document.querySelector("#active-filters"),
+      results: document.querySelector("#results")
+    };
+
+    function escapeHTML(value = "") {
+      return String(value)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    function normalize(value = "") {
+      return String(value)
+        .toLocaleLowerCase("it")
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "");
+    }
+
+    function sortEvents(a, b) {
+      const dayResult = Number(a.day) - Number(b.day);
+
+      if (dayResult !== 0) {
+        return dayResult;
+      }
+
+      if (a.time === "GG" && b.time !== "GG") return -1;
+      if (a.time !== "GG" && b.time === "GG") return 1;
+
+      return a.time.localeCompare(b.time);
+    }
+
+    function populateSpaceSelect() {
+      const availableSpaces = [...new Set(
+        events.map(event => event.space)
+      )].sort((a, b) => a.localeCompare(b, "it"));
+
+      availableSpaces.forEach(spaceName => {
+        const option = document.createElement("option");
+        option.value = spaceName;
+        option.textContent = spaceName;
+        elements.space.append(option);
+      });
+    }
+
+    function renderDayButtons() {
+      const dayCounts = {};
+
+      events.forEach(event => {
+        dayCounts[event.day] = (dayCounts[event.day] || 0) + 1;
+      });
+
+      elements.dayButtons.innerHTML = `
+        <button
+          class="filter-chip active"
+          type="button"
+          data-day=""
+        >
+          Tutti
+          <span class="chip-count">${events.length}</span>
+        </button>
+
+        ${Object.keys(dateLabels).map(day => `
+          <button
+            class="filter-chip"
+            type="button"
+            data-day="${day}"
+          >
+            ${escapeHTML(dateLabels[day])}
+            <span class="chip-count">${dayCounts[day] || 0}</span>
+          </button>
+        `).join("")}
+      `;
+    }
+
+    function renderSpaceButtons() {
+      const availableSpaces = [...new Set(
+        events.map(event => event.space)
+      )].sort((a, b) => a.localeCompare(b, "it"));
+
+      elements.spaceButtons.innerHTML = `
+        <button
+          class="filter-chip active"
+          type="button"
+          data-space=""
+        >
+          Tutti gli spazi
+        </button>
+
+        ${availableSpaces.map(spaceName => `
+          <button
+            class="filter-chip"
+            type="button"
+            data-space="${escapeHTML(spaceName)}"
+          >
+            ${escapeHTML(spaceName)}
+          </button>
+        `).join("")}
+      `;
+    }
+
+    function getFilteredEvents() {
+      const query = normalize(elements.search.value.trim());
+      const selectedDay = elements.date.value;
+      const from = elements.from.value;
+      const to = elements.to.value;
+      const selectedSpace = elements.space.value;
+
+      return events
+        .filter(event => {
+          const searchableText = normalize([
+            event.title,
+            event.category,
+            event.space,
+            dateLabels[event.day]
+          ].join(" "));
+
+          if (query && !searchableText.includes(query)) {
+            return false;
+          }
+
+          if (selectedDay && event.day !== selectedDay) {
+            return false;
+          }
+
+          if (selectedSpace && event.space !== selectedSpace) {
+            return false;
+          }
+
+          /*
+            Gli eventi "Tutto il giorno" vengono mostrati
+            in qualsiasi fascia oraria selezionata.
+          */
+          if (event.time !== "GG") {
+            if (from && event.time < from) {
+              return false;
+            }
+
+            if (to && event.time > to) {
+              return false;
+            }
+          }
+
+          return true;
+        })
+        .sort(sortEvents);
+    }
+
+    function groupEventsBySpace(filteredEvents) {
+      return filteredEvents.reduce((groups, event) => {
+        if (!groups[event.space]) {
+          groups[event.space] = [];
+        }
+
+        groups[event.space].push(event);
+        return groups;
+      }, {});
+    }
+
+    function getTimeLabel(event) {
+      return event.time === "GG"
+        ? "Tutto il giorno"
+        : event.time;
+    }
+
+    function createEventCard(event) {
+      return `
+        <article class="event-card">
+          <div class="event-content">
+            <div class="event-meta">
+              <span class="meta-pill">
+                ${escapeHTML(dateLabels[event.day])}
+              </span>
+
+              <span class="meta-pill">
+                ${escapeHTML(getTimeLabel(event))}
+              </span>
+            </div>
+
+            <h4>${escapeHTML(event.title)}</h4>
+
+            <div class="event-category">
+              ${escapeHTML(event.category)}
+            </div>
+          </div>
+        </article>
+      `;
+    }
+
+    function renderActiveFilters() {
+      const labels = [];
+
+      if (elements.search.value.trim()) {
+        labels.push(`Ricerca: “${elements.search.value.trim()}”`);
+      }
+
+      if (elements.date.value) {
+        labels.push(dateLabels[elements.date.value]);
+      }
+
+      if (elements.from.value) {
+        labels.push(`dalle ${elements.from.value}`);
+      }
+
+      if (elements.to.value) {
+        labels.push(`alle ${elements.to.value}`);
+      }
+
+      if (elements.space.value) {
+        labels.push(elements.space.value);
+      }
+
+      elements.activeFilters.textContent = labels.join(" · ");
+    }
+
+    function updateActiveButtons() {
+      document
+        .querySelectorAll("[data-day]")
+        .forEach(button => {
+          button.classList.toggle(
+            "active",
+            button.dataset.day === elements.date.value
+          );
+        });
+
+      document
+        .querySelectorAll("[data-space]")
+        .forEach(button => {
+          button.classList.toggle(
+            "active",
+            button.dataset.space === elements.space.value
+          );
+        });
+    }
+
+    function renderEvents() {
+      const filteredEvents = getFilteredEvents();
+      const groupedEvents = groupEventsBySpace(filteredEvents);
+
+      elements.count.innerHTML = `
+        <strong>${filteredEvents.length}</strong>
+        ${filteredEvents.length === 1
+          ? "appuntamento trovato"
+          : "appuntamenti trovati"}
+      `;
+
+      renderActiveFilters();
+
+      if (!filteredEvents.length) {
+        elements.results.innerHTML = `
+          <div class="empty-state">
+            <h3>Nessun appuntamento trovato</h3>
+            <p>
+              Prova a modificare il giorno, la fascia oraria,
+              lo spazio oppure la parola cercata.
+            </p>
+          </div>
+        `;
+        return;
+      }
+
+      elements.results.innerHTML = Object.entries(groupedEvents)
+        .sort(([spaceA], [spaceB]) =>
+          spaceA.localeCompare(spaceB, "it")
+        )
+        .map(([spaceName, spaceEvents]) => `
+          <section class="space-section">
+            <div class="space-heading">
+              <h3>${escapeHTML(spaceName)}</h3>
+
+              <span class="space-count">
+                ${spaceEvents.length}
+                ${spaceEvents.length === 1 ? "evento" : "eventi"}
+              </span>
+            </div>
+
+            <div class="events-grid">
+              ${spaceEvents
+                .sort(sortEvents)
+                .map(createEventCard)
+                .join("")}
+            </div>
+          </section>
+        `)
+        .join("");
+    }
+
+    function refresh() {
+      updateActiveButtons();
+      renderEvents();
+    }
+
+    elements.form.addEventListener("input", refresh);
+    elements.form.addEventListener("change", refresh);
+
+    elements.form.addEventListener("reset", () => {
+      setTimeout(refresh, 0);
+    });
+
+    elements.dayButtons.addEventListener("click", event => {
+      const button = event.target.closest("[data-day]");
+
+      if (!button) return;
+
+      elements.date.value = button.dataset.day;
+      refresh();
+    });
+
+    elements.spaceButtons.addEventListener("click", event => {
+      const button = event.target.closest("[data-space]");
+
+      if (!button) return;
+
+      elements.space.value = button.dataset.space;
+      refresh();
+    });
+
+    populateSpaceSelect();
+    renderDayButtons();
+    renderSpaceButtons();
+    renderEvents();
+
+    /*
+      Controllo automatico visualizzato nella console.
+      Per aprire la console: F12 > Console.
+    */
+    console.log("Appuntamenti caricati:", events.length);
+
+    Object.keys(dateLabels).forEach(day => {
+      console.log(
+        dateLabels[day] + ":",
+        events.filter(event => event.day === day).length
+      );
+    });
+  </script>
+</body>
+</html>
